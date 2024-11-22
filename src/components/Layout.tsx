@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
+import { useLocation } from "react-router-dom"; 
 import Topbar from "./Topbar";
-import Sidebar from "./Sidebar"; // Left Sidebar
-import RightSidebar from "./RightSidebar"; // Right Sidebar
+import Sidebar from "./Sidebar"; 
+import RightSidebar from "./RightSidebar"; 
 
 interface LayoutProps {
   children: ReactNode;
@@ -11,7 +11,6 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation(); // Get current route location
 
-  // Hide Topbar on the /chat route
   const showTopbar = location.pathname !== "/chat";
 
   return (

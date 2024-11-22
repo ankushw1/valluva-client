@@ -12,6 +12,7 @@ import {
   FaTasks,
   FaFileUpload,
   FaImage,
+  FaUsers,
 } from "react-icons/fa";
 const { SketchPicker } = require("react-color");
 
@@ -168,7 +169,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
           <div className="flex items-center space-x-2 rounded">
             <div
               style={{ backgroundColor: selectedColor }}
-              className="relative border border-gray-300 rounded-lg p-2 mt-4 mb-4"
+              className="relative border border-gray-300 rounded-lg p-[9px] mt-4 mb-4"
             >
               <div
                 className="absolute w-[10px] h-[10px] rounded-full"
@@ -258,7 +259,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
               <div className="flex items-center border border-gray-300 rounded p-2 w-[13rem]">
                 <FaTags
                   className="text-gray-500 mr-2 cursor-pointer"
-                  onClick={togglePeopleDropdown}
+                  onClick={toggleProjectDropdown}
                 />
                 <div className="flex flex-wrap gap-2 flex-1">
                   {selectedProjects.length > 0 ? (
@@ -301,10 +302,11 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
 
             <div className="relative">
               <div className="flex items-center border border-gray-300 rounded p-2 w-[13rem]">
-                <FaTags
+                <FaUsers
                   className="text-gray-500 mr-2 cursor-pointer"
                   onClick={togglePeopleDropdown}
                 />
+
                 <div className="flex flex-wrap gap-2 flex-1">
                   {selectedPeople.length > 0 ? (
                     selectedPeople.map((person) => (
@@ -356,6 +358,15 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
             placeholder="Description (if any)"
             className="border border-gray-300 rounded p-2 h-[8rem] w-full mb-4"
           ></textarea>
+
+          <div className="absolute bottom-6 right-2 flex">
+            <button className="p-2 rounded-full">
+              <FaImage className="text-gray-600" size={20} />
+            </button>
+            <button className="p-2 rounded-full">
+              <FaFileUpload className="text-gray-600" size={20} />
+            </button>
+          </div>
         </div>
 
         <div className="flex justify-end space-x-2">

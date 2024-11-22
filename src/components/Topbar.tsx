@@ -13,7 +13,6 @@ const Topbar: React.FC = () => {
     <>
       <div className="bg-gray-200 border-b-2 border-gray-300 text-black">
         <div className="ml-12 mr-8 flex flex-col sm:flex-row justify-between items-center p-4 h-full">
-          {/* Navigation Links */}
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-2">
             <Link to="/home">
               <button
